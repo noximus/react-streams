@@ -8,14 +8,13 @@
     },
     {
       "title": "new stream",
-      "description": "new one with history added",
+      "description": "new one with history patch request",
       "userId": "105721993596103317211",
       "id": 4
     },
     {
       "title": "new submit",
-      "description": "combined component form",
-      "userId": "105721993596103317211",
+      "description": "combing",
       "id": 5
     }
   ]
