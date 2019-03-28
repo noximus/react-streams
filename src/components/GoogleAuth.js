@@ -22,6 +22,7 @@ class GoogleAuth extends Component {
       this.props.signIn(this.auth.currentUser.get().getId());
     } else {
       this.props.signOut();
+      // this.props.userId
     }
   };
 
@@ -61,7 +62,8 @@ class GoogleAuth extends Component {
 }
 
 const mapStateToProps = state => ({
-  isSignedIn: state.auth.isSignedIn
+  isSignedIn: state.auth.isSignedIn,
+  userId: state.auth.isSignedIn
 })
 
 export default connect(mapStateToProps, { signIn, signOut })(GoogleAuth);
