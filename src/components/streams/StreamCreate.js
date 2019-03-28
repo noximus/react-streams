@@ -28,7 +28,7 @@ class StreamCreate extends Component {
     this.props.createStream(formValues);
   }
   render() {
-    console.log(this.props)
+    // console.log(this.props)
     return (
       <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="ui form error">
         <Field
