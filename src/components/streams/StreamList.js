@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchStreams } from "../../actions";
 import { Link } from "react-router-dom";
@@ -14,7 +14,10 @@ class StreamList extends Component {
           <Link to={`/streams/edit/${stream.id}`} className="ui button orange">
             EDIT
           </Link>
-          <Link to={`/streams/delete/${stream.id}`} className="ui button negative">
+          <Link
+            to={`/streams/delete/${stream.id}`}
+            className="ui button negative"
+          >
             DELETE
           </Link>
         </div>
@@ -31,22 +34,22 @@ class StreamList extends Component {
             <Link to={`/streams/${stream.id}`} className="header">
               {stream.title}
             </Link>
-            
+
             <div className="description">{stream.description}</div>
-          </div>  
+          </div>
         </div>
-      )
-    })
+      );
+    });
   }
   renderCreate() {
     if (this.props.isSignedIn) {
       return (
-        <div style={{ textAlign: 'right' }}>
+        <div style={{ textAlign: "right" }}>
           <Link to="/streams/new" className="ui button Primary green">
             Create Stream
           </Link>
         </div>
-      )
+      );
     }
   }
   render() {
@@ -60,10 +63,13 @@ class StreamList extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   streams: Object.values(state.streams),
   currentUserId: state.auth.userId,
   isSignedIn: state.auth.isSignedIn
-})
+});
 
-export default connect(mapStateToProps, { fetchStreams })(StreamList);
+export default connect(
+  mapStateToProps,
+  { fetchStreams }
+)(StreamList);

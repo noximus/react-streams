@@ -7,14 +7,13 @@ const initialState = {
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
+    case SIGN_IN:
+      return { ...state, isSignedIn: true, userId: payload };
 
-  case SIGN_IN:
-    return { ...state, isSignedIn: true, userId: payload }
+    case SIGN_OUT:
+      return { ...state, isSignedIn: false };
 
-  case SIGN_OUT:
-    return { ...state, isSignedIn: false }
-
-  default:
-    return state
+    default:
+      return state;
   }
-}
+};
