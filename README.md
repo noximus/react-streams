@@ -1,3 +1,23 @@
+# Streams CRUD with node API
+
+## Getting Started
+
+Use NPM in commnand line to install the file dependencies. you will also need to do this in the /api folder.
+
+```
+npm i
+```
+
+## Run the project
+
+You will need to run the project in two places in the code. The root folder and the /api folder for the server.
+
+```
+npm run start
+```
+
+Running this in BOTH FOLDERS will start your project.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
